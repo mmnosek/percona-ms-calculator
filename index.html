@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>AWS RDS vs Percona MS on AWS</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+    </script>
+    <script src="aws-sdk.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="ec2Instances.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <table class="table">
+      <tr>
+        <td>Instance type</td>
+        <td><select class="custom-select" id="instanceType"></select>
+      </tr>
+      <tr>
+        <td>Server count</td>
+        <td><input class="form-control" type="number" id="serverCount" value="1" min="1" max="20"/></td>
+      </tr>
+      <tr>
+        <td>Setup fee</td>
+        <td><input class="form-control" type="text" id="setupFee" min="0" value="5000"/></td>
+      </tr>
+    </table>
+    <button class="btn btn-primary" id="btnCalculate">Calculate</button>
+<hr>
+
+    <table class="table">
+      <tr>
+        <td>AWS Price Monthly</td>
+        <td><input type="text" class="form-control" disabled id="awsPriceMonthly"/></td>
+      </tr>
+      <tr>
+        <td>MS Price Monthly</td>
+        <td><input type="text" class="form-control" disabled id="msPriceMonthly"/></td>
+      </tr>
+    </table>
+  </body>
+</html>
